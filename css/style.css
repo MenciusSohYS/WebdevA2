@@ -415,7 +415,7 @@ a,h1,h2,h3,p,title{
     height: auto;
   }
   .book2details{
-    font-size: 15px;
+    font-size: 20px;
   }
 
   .book1details{
@@ -480,7 +480,7 @@ a,h1,h2,h3,p,title{
   }
   
   .book1details{
-    font-size: 18px;
+    font-size: 20px;
   }
 
   .book2image{
@@ -534,7 +534,7 @@ a,h1,h2,h3,p,title{
   }
 
   .book1details{
-    font-size: 15px;
+    font-size: 20px;
   }
 
   .tri-container{
@@ -550,7 +550,11 @@ a,h1,h2,h3,p,title{
   .bar a{
     font-size: 15px;
     z-index: 2;
-  }  
+  }
+
+  .sliderarea{
+    height: 50px;
+  }
 }
 
 @media screen and (max-width: 640px){
