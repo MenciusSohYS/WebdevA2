@@ -228,6 +228,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         elem.style.position = "fixed";
         elem.style.left = "50%";
+
+        const imageelem = document.getElementById("XeeleeSq");
+        var rectofelem =  imageelem.getBoundingClientRect();
+        document.getElementById("FavBook").style.top = rectofelem.bottom + 'px';
     }
     
 }, false);
@@ -347,6 +351,12 @@ window.addEventListener('resize', function() {
             document.getElementById("XeeleeNightFighter").style.height = window.innerWidth / 10 + 'px';
             document.getElementById("XeeleeNightFighter").style.width = window.innerWidth / 10 + 'px';
         }
+
+        const imageelem = document.getElementById("XeeleeSq");
+        imageelem.style.height = imageelem.offsetWidth * 0.5625 + 'px';
+        
+        const imageelem2 = document.getElementById("VDBook");
+        imageelem2.style.height = imageelem2.offsetWidth * 1.59362549801 + 'px';
     }
 
 }, false);
