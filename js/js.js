@@ -349,6 +349,7 @@ window.addEventListener('resize', function() {
 
 
 //changing of stuff based on element clicked
+//i know its a duplicate of the above but its for troubleshooting, will merge them ltr
 document.addEventListener('DOMContentLoaded', function()
 {
     if (document.URL.includes("index.html"))
