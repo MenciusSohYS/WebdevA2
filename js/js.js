@@ -7,7 +7,7 @@ var changecourseY = 1;
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    if (document.URL.includes("Index.html"))
+    if (document.URL.includes("index.html"))
     {
         document.getElementById("bookback2").style.display = "none";
         document.getElementById("bookfront2").style.display = "none";
@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', function() {
 }, false);
 
 window.addEventListener('resize', function() {
-    if (document.URL.includes("Index.html") )
+    if (document.URL.includes("index.html") )
     {
         const eleb = document.getElementById("bookback");
         const elef = document.getElementById("bookfront");
@@ -351,7 +351,7 @@ window.addEventListener('resize', function() {
 //changing of stuff based on element clicked
 document.addEventListener('DOMContentLoaded', function()
 {
-    if (document.URL.includes("Index.html"))
+    if (document.URL.includes("index.html"))
     {
         document.getElementById("SolarSys").addEventListener('click', function(){
             const eleb = document.getElementById("bookback");
