@@ -9,6 +9,8 @@ var changecourseY = 1;
 document.addEventListener('DOMContentLoaded', function() {
     if (document.URL.includes("index.html"))
     {
+        document.getElementById("bookback").style.zIndex = 1;
+        document.getElementById("bookfront").style.zIndex = 1;
         document.getElementById("bookback2").style.display = "none";
         document.getElementById("bookfront2").style.display = "none";
         document.getElementById("bookback3").style.display = "none";
@@ -46,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
             changethisbookb.style.left = bb.left  + 'px';
             }, false);
         
-            document.getElementById("Galaxy").addEventListener("click",function (){
+        document.getElementById("Galaxy").addEventListener("click",function (){
                 const eleb = document.getElementById("bookback");
                 const elef = document.getElementById("bookfront");
                 const bb = eleb.getBoundingClientRect();
@@ -72,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 changethisbookb.style.left = bb.left  + 'px';
             },false);
         
-            document.getElementById("Universe").addEventListener("click",function (){
+        document.getElementById("Universe").addEventListener("click",function (){
                 const eleb = document.getElementById("bookback");
                 const elef = document.getElementById("bookfront");
                 const bb = eleb.getBoundingClientRect();
@@ -98,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 changethisbookb.style.left = bb.left  + 'px';
             }, false);
         
-            document.getElementById("sliderarea").addEventListener("input", function (){
+        document.getElementById("sliderarea").addEventListener("input", function (){
                 var kvalue = document.getElementById('kslider');
                 const showvalue = document.getElementById('slidervalue');
                 showvalue.innerHTML = kvalue.value/10;
@@ -136,10 +138,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     else if (document.URL.includes("SolarSystem.html"))
     {
-        document.getElementById("book1image2").style.gridRowStart = 2;
-        document.getElementById("book1details2").style.gridRowStart = 2;
-        document.getElementById("book1image2").style.gridRowEnd = 3;
-        document.getElementById("book1details2").style.gridRowEnd = 3;
+        if (window.innerHeight >= "640px")
+        {
+            document.getElementById("book1image2").style.gridRowStart = 2;
+            document.getElementById("book1details2").style.gridRowStart = 2;
+            document.getElementById("book1image2").style.gridRowEnd = 3;
+            document.getElementById("book1details2").style.gridRowEnd = 3;
+        }
         const rect = document.getElementById("book1details").getBoundingClientRect();
         const rect2 = document.getElementById("fermi").getBoundingClientRect();
         const height1 = rect.height - 50;
@@ -352,123 +357,7 @@ window.addEventListener('resize', function() {
 //i know its a duplicate of the above but its for troubleshooting, will merge them ltr
 document.addEventListener('DOMContentLoaded', function()
 {
-    if (document.URL.includes("index.html"))
-    {
-        document.getElementById("SolarSys").addEventListener('click', function(){
-            const eleb = document.getElementById("bookback");
-            const elef = document.getElementById("bookfront");
-            const bb = eleb.getBoundingClientRect();
-            const bf = elef.getBoundingClientRect();
-            const changethisbookf = document.getElementById('bookfront2');
-            const changethisbookb = document.getElementById('bookback2');
-            eleb.style.zIndex = "0";
-            elef.style.zIndex = "0";
-            document.getElementById("bookback3").style.display = "none";
-            document.getElementById("bookfront3").style.display = "none";
-            document.getElementById("bookback4").style.display = "none";
-            document.getElementById("bookfront4").style.display = "none";
-            changethisbookb.style.display = "block";
-            changethisbookf.style.display = "block";
-            changethisbookb.style.width = eleb.offsetWidth - 20 + 'px';
-            changethisbookf.style.width = elef.offsetWidth - 20 + 'px';
-            
-            changethisbookb.style.height = eleb.offsetHeight - 20 + 'px';
-            changethisbookf.style.height = elef.offsetHeight - 20 + 'px';
-            
-            changethisbookf.style.left = bf.left  + 'px';
-            changethisbookb.style.left = bb.left  + 'px';
-            }, false);
-        
-            document.getElementById("Galaxy").addEventListener("click",function (){
-                const eleb = document.getElementById("bookback");
-                const elef = document.getElementById("bookfront");
-                const bb = eleb.getBoundingClientRect();
-                const bf = elef.getBoundingClientRect();
-                const changethisbookf = document.getElementById("bookfront3");
-                const changethisbookb = document.getElementById("bookback3");
-         
-                eleb.style.zIndex = "0";
-                elef.style.zIndex = "0";
-                document.getElementById("bookback2").style.display = "none";
-                document.getElementById("bookfront2").style.display = "none";
-                document.getElementById("bookback4").style.display = "none";
-                document.getElementById("bookfront4").style.display = "none";
-                changethisbookb.style.display = "block";
-                changethisbookf.style.display = "block";
-         
-                changethisbookb.style.width = eleb.offsetWidth - 20 + 'px';
-                changethisbookf.style.width = elef.offsetWidth - 20 + 'px';
-                changethisbookb.style.height = eleb.offsetHeight - 20 + 'px';
-                changethisbookf.style.height = elef.offsetHeight - 20 + 'px';
-             
-                changethisbookf.style.left = bf.left  + 'px';
-                changethisbookb.style.left = bb.left  + 'px';
-            },false);
-        
-            document.getElementById("Universe").addEventListener("click",function (){
-                const eleb = document.getElementById("bookback");
-                const elef = document.getElementById("bookfront");
-                const bb = eleb.getBoundingClientRect();
-                const bf = elef.getBoundingClientRect();
-                const changethisbookf = document.getElementById("bookfront4");
-                const changethisbookb = document.getElementById("bookback4");
-         
-                eleb.style.zIndex = "0";
-                elef.style.zIndex = "0";
-                document.getElementById("bookback2").style.display = "none";
-                document.getElementById("bookfront2").style.display = "none";
-                document.getElementById("bookback3").style.display = "none";
-                document.getElementById("bookfront3").style.display = "none";
-                changethisbookf.style.display = "block";
-                changethisbookb.style.display = "block";
-         
-                changethisbookb.style.width = eleb.offsetWidth - 20 + 'px';
-                changethisbookf.style.width = elef.offsetWidth - 20 + 'px';
-                changethisbookb.style.height = eleb.offsetHeight - 20 + 'px';
-                changethisbookf.style.height = elef.offsetHeight - 20 + 'px';
-             
-                changethisbookf.style.left = bf.left  + 'px';
-                changethisbookb.style.left = bb.left  + 'px';
-            }, false);
-        
-            document.getElementById("sliderarea").addEventListener("input", function (){
-                var kvalue = document.getElementById('kslider');
-                const showvalue = document.getElementById('slidervalue');
-                showvalue.innerHTML = kvalue.value/10;
-                if (kvalue.value < 10)
-                {
-                    document.getElementById('civ').src = "image/0.7.png";
-                    document.getElementById('civ').style.width = "180px";
-                    document.getElementById('civ').style.height = "180px";
-                }
-                else if (kvalue.value < 20)
-                {
-                    document.getElementById('civ').src = "image/1.0.png";
-                    document.getElementById('civ').style.width = "180px";
-                    document.getElementById('civ').style.height = "180px";
-                }
-                else if (kvalue.value < 30)
-                {
-                    document.getElementById('civ').src = "image/2.0.png";
-                    document.getElementById('civ').style.width = "200px";
-                    document.getElementById('civ').style.height = "200px";
-                }
-                else if (kvalue.value < 40)
-                {
-                    document.getElementById('civ').src = "image/3.0.png";
-                    document.getElementById('civ').style.width = "300px";
-                    document.getElementById('civ').style.height = "300px";
-                }
-                else
-                {
-                    document.getElementById('civ').src = "image/4.0.png";
-                    document.getElementById('civ').style.width = "400px";
-                    document.getElementById('civ').style.height = "400px";
-                }
-            }, false);
-        
-    }    
-    else if (document.URL.includes("GalaxyBook.html"))
+    if (document.URL.includes("GalaxyBook.html"))
     {
         function increaseinsize(imageid){
             if (active == true)
@@ -480,7 +369,7 @@ document.addEventListener('DOMContentLoaded', function()
                     {
                         variables = 0.563;
                     }
-                    else if (imageid == "40k1")
+                    else if (imageid == "40k2")
                     {
                         variables = 0.41786743515;
                     }
