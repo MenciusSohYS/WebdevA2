@@ -102,7 +102,8 @@ a,h1,h2,h3,p,title{
   padding: 10px 10px;
   float: left;
   background: rgb(217, 214, 221);  
-  color: black
+  color: black;
+  font-size: 20px
 }
 
 .bookfront3{
@@ -113,7 +114,8 @@ a,h1,h2,h3,p,title{
   padding: 10px 10px;
   float: left;
   background: rgb(67, 180, 52);  
-  color: black
+  color: black;
+  font-size: 20px
 }
 
 .bookfront4{
@@ -124,7 +126,8 @@ a,h1,h2,h3,p,title{
   padding: 10px 10px;
   float: left;
   background: rgb(103, 90, 216);  
-  color: black
+  color: black;
+  font-size: 20px
 }
 
 .bookback2{
@@ -135,7 +138,8 @@ a,h1,h2,h3,p,title{
   padding: 10px 10px;
   float: right;
   background: rgb(228, 224, 224);
-  color: black
+  color: black;
+  font-size: 20px
 }
 
 .bookback3{
@@ -146,7 +150,8 @@ a,h1,h2,h3,p,title{
   padding: 10px 10px;
   float: right;
   background: rgb(25, 221, 41);
-  color: black
+  color: black;
+  font-size: 20px
 }
 
 .bookback4{
@@ -157,7 +162,8 @@ a,h1,h2,h3,p,title{
   padding: 10px 10px;
   float: right;
   background: rgb(117, 138, 177);
-  color: black
+  color: black;
+  font-size: 20px
 }
 
 

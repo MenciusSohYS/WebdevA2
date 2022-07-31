@@ -137,12 +137,14 @@ document.addEventListener('DOMContentLoaded', function() {
                     document.getElementById('civ').src = "image/4.0.png";
                     document.getElementById('civ').style.width = "400px";
                     document.getElementById('civ').style.height = "400px";
-                    document.getElementById('DescriptionContainer').textContent = "At 4.0, the civilisation is Universal, able to harness and move across the universe, they can possibly reach alternate universes and probably have population count in the Quadtrillion";
+                    document.getElementById('DescriptionContainer').textContent = "At 4.0, the civilisation is Universal, able to harness and move across the universe, they can possibly reach alternate universes and probably have population count in the Quadtrillion. The Xeelee from the Xeelee Sequence Universe are this tier and can even go into other universe";
                 }
             }, false);
     }
     else if (document.URL.includes("SolarSystem.html"))
     {
+        document.getElementById("book1image2").style.backgroundColor = "black";
+        document.getElementById("book1details2").style.backgroundColor = "black";
         if (window.innerHeight >= "640px")
         {
             document.getElementById("book1image2").style.gridRowStart = 2;
@@ -231,11 +233,29 @@ document.addEventListener('DOMContentLoaded', function() {
             elem.style.height = window.innerWidth / 10 + 'px';
             elem.style.width = window.innerWidth / 10 + 'px';
         }
+
         elem.style.position = "fixed";
         elem.style.left = "50%";
 
         const imageelem = document.getElementById("XeeleeSq");
         imageelem.style.height = imageelem.offsetWidth * 0.5625 + 'px';
+
+        document.getElementById("XeeleeNightFighter").addEventListener('click', function(){
+            const elem = document.getElementById("XeeleeNightFighter");
+            if (elem.getAttribute('src')===("image/NightFighter.png"))
+            {
+                elem.src = "image/Explosion.png";
+                var rectofelem = elem.getBoundingClientRect();
+                var leftofelem = rectofelem.left;
+                alert(leftofelem);
+                var topofelem = rectofelem.top;
+                elem.style.position = "absolute";
+                elem.style.top = topofelem;
+                elem.style.left = leftofelem;
+                rectofelem = elem.getBoundingClientRect();
+                alert(rectofelem.left);
+            }
+        }, false);
     }
     
 }, false);
@@ -357,7 +377,7 @@ window.addEventListener('resize', function() {
         }
 
         const imageelem = document.getElementById("XeeleeSq");
-        imageelem.style.height = imageelem.offsetWidth * 0.5625 + 'px';
+        imageelem.style.height = imageelem.offsetWidth * 0.5625 + 'px';        
     }
 
 }, false);
@@ -365,7 +385,7 @@ window.addEventListener('resize', function() {
 
 
 //changing of stuff based on element clicked
-//i know its a duplicate of the above but its for troubleshooting, will merge them ltr
+//placed it here and not above because it is easier to track like this
 document.addEventListener('DOMContentLoaded', function()
 {
     if (document.URL.includes("GalaxyBook.html"))
@@ -464,87 +484,74 @@ document.addEventListener('DOMContentLoaded', function()
             increaseinsize("40k1")
         }, false);
     }
-    else if (document.URL.includes("Universe.html"))
-    {
-        document.getElementById("uniarea").style.height = window.innerHeight / 2 + 'px';
-        if(window.innerHeight < window.innerWidth)
-        {
-            document.getElementById("XeeleeNightFighter").style.height = window.innerHeight / 10 + 'px';
-            document.getElementById("XeeleeNightFighter").style.width = window.innerHeight / 10 + 'px';
-        }
-        else
-        {
-            document.getElementById("XeeleeNightFighter").style.height = window.innerWidth / 10 + 'px';
-            document.getElementById("XeeleeNightFighter").style.width = window.innerWidth / 10 + 'px';
-        }
-    }
 }, false);
 
 if (document.URL.includes("Universe.html"))
 {
     setInterval(() => {
         const elem = document.getElementById("XeeleeNightFighter");
+        if (elem.getAttribute('src')===("image/NightFighter.png"))
+        {
+            var rectofelem = elem.getBoundingClientRect();
+            var prevleft = rectofelem.left;
+            var prevtop = rectofelem.top;
+            const border = document.getElementById("uniarea").getBoundingClientRect();
+            elem.style.position = "fixed";
 
-        var rectofelem = elem.getBoundingClientRect();
-        var prevleft = rectofelem.left;
-        var prevtop = rectofelem.top;
-        const border = document.getElementById("uniarea").getBoundingClientRect();
-        elem.style.position = "fixed";
+            if (changecourseX < 0)
+            {
+                elem.style.left = rectofelem.left + 1 + 'px';            
+            }
+            else
+            {
+                elem.style.left = rectofelem.left - 1 + 'px';            
+            }
+            
+            if (changecourseY < 0)
+            {
+                elem.style.top = rectofelem.top + 1 + 'px';
+            }
+            else
+            {
+                elem.style.top = rectofelem.top - 1 + 'px';
+            }
 
-        if (changecourseX < 0)
-        {
-            elem.style.left = rectofelem.left + 1 + 'px';            
-        }
-        else
-        {
-            elem.style.left = rectofelem.left - 1 + 'px';            
-        }
-        
-        if (changecourseY < 0)
-        {
-            elem.style.top = rectofelem.top + 1 + 'px';
-        }
-        else
-        {
-            elem.style.top = rectofelem.top - 1 + 'px';
-        }
+            if (rectofelem.right > border.right)
+            {
+                changecourseX = 1;
+            }
+            else if (rectofelem.left < border.left)
+            {
+                changecourseX = -1;
+            }
 
-        if (rectofelem.right > border.right)
-        {
-            changecourseX = 1;
-        }
-        else if (rectofelem.left < border.left)
-        {
-            changecourseX = -1;
-        }
+            if (rectofelem.bottom > border.bottom)
+            {
+                changecourseY = 1;
+            }
+            else if (rectofelem.top < border.top)
+            {
+                changecourseY = -1;
+            }
 
-        if (rectofelem.bottom > border.bottom)
-        {
-            changecourseY = 1;
-        }
-        else if (rectofelem.top < border.top)
-        {
-            changecourseY = -1;
-        }
+            rectofelem = elem.getBoundingClientRect();
 
-        rectofelem = elem.getBoundingClientRect();
-
-        if (prevleft < rectofelem.left && prevtop < rectofelem.top)
-        {
-            elem.style.transform = "rotate(0deg)";
-        }
-        else if (prevleft > rectofelem.left && prevtop > rectofelem.top)
-        {
-            elem.style.transform = "rotate(180deg)";
-        }
-        else if (prevleft < rectofelem.left && prevtop > rectofelem.top)
-        {
-            elem.style.transform = "rotate(-90deg)";
-        }
-        else if (prevleft > rectofelem.left && prevtop < rectofelem.top)
-        {
-            elem.style.transform = "rotate(90deg)";
-        }
-
+            if (prevleft < rectofelem.left && prevtop < rectofelem.top)
+            {
+                elem.style.transform = "rotate(0deg)";
+            }
+            else if (prevleft > rectofelem.left && prevtop > rectofelem.top)
+            {
+                elem.style.transform = "rotate(180deg)";
+            }
+            else if (prevleft < rectofelem.left && prevtop > rectofelem.top)
+            {
+                elem.style.transform = "rotate(-90deg)";
+            }
+            else if (prevleft > rectofelem.left && prevtop < rectofelem.top)
+            {
+                elem.style.transform = "rotate(90deg)";
+            }
+        }        
     }, 5);
 }
