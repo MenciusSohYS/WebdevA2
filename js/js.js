@@ -109,35 +109,35 @@ document.addEventListener('DOMContentLoaded', function() {
                     document.getElementById('civ').src = "image/0.7.png";
                     document.getElementById('civ').style.width = "180px";
                     document.getElementById('civ').style.height = "180px";
-                    document.getElementById('civ').textContent = "This is the current place or planet has on the scale, we're about 0.7 on the Kardashev scale and have a long way to go before we're at the 1.0 mark, maybe in a few hundred years time we will reach that point.";
+                    document.getElementById('DescriptionContainer').textContent = "This is the current place or planet has on the scale, we're about 0.7 on the Kardashev scale and have a long way to go before we're at the 1.0 mark, maybe in a few hundred years time we will reach that point.";
                 }
                 else if (kvalue.value < 20)
                 {
                     document.getElementById('civ').src = "image/1.0.png";
                     document.getElementById('civ').style.width = "180px";
                     document.getElementById('civ').style.height = "180px";
-                    document.getElementById('civ').textContent = "At 1.0, the civilisation can completely harness the planet's resources and energy, being completely sufficient and out putting a lot of energy. The Trisolaris from Three body problem are 1.0"
+                    document.getElementById('DescriptionContainer').textContent = "At 1.0, the civilisation can completely harness the planet's resources and energy, being completely sufficient and out putting a lot of energy. The Trisolaris from Three body problem are 1.0"
                 }
                 else if (kvalue.value < 30)
                 {
                     document.getElementById('civ').src = "image/2.0.png";
                     document.getElementById('civ').style.width = "200px";
                     document.getElementById('civ').style.height = "200px";
-                    document.getElementById('civ').textContent = "At 2.0, the civilisation uses all the possible power available from the solar system, including the sun itself, some examples are the Dyson Swarm/Sphere and space stations as big as continents, Humans from 40k are 2.7 on the scale";
+                    document.getElementById('DescriptionContainer').textContent = "At 2.0, the civilisation uses all the possible power available from the solar system, including the sun itself, some examples are the Dyson Swarm/Sphere and space stations as big as continents, Humans from 40k are 2.7 on the scale";
                 }
                 else if (kvalue.value < 40)
                 {
                     document.getElementById('civ').src = "image/3.0.png";
                     document.getElementById('civ').style.width = "300px";
                     document.getElementById('civ').style.height = "300px";
-                    document.getElementById('civ').textContent = "At 3.0, the civilisation is beyond us right now, having an out put millions of times more than us right now. They're able to 'time travel' and move fater than the speed of light";
+                    document.getElementById('DescriptionContainer').textContent = "At 3.0, the civilisation is beyond us right now, having an out put millions of times more than us right now. They're able to 'time travel' and move fater than the speed of light";
                 }
                 else
                 {
                     document.getElementById('civ').src = "image/4.0.png";
                     document.getElementById('civ').style.width = "400px";
                     document.getElementById('civ').style.height = "400px";
-                    document.getElementById('civ').textContent = "At 4.0, the civilisation is Universal, able to harness and move across the universe, they can possibly reach alternate universes and probably have population count in the Quadtrillion";
+                    document.getElementById('DescriptionContainer').textContent = "At 4.0, the civilisation is Universal, able to harness and move across the universe, they can possibly reach alternate universes and probably have population count in the Quadtrillion";
                 }
             }, false);
     }
@@ -235,8 +235,7 @@ document.addEventListener('DOMContentLoaded', function() {
         elem.style.left = "50%";
 
         const imageelem = document.getElementById("XeeleeSq");
-        var rectofelem =  imageelem.getBoundingClientRect();
-        document.getElementById("FavBook").style.top = rectofelem.bottom + 'px';
+        imageelem.style.height = imageelem.offsetWidth * 0.5625 + 'px';
     }
     
 }, false);
@@ -359,9 +358,6 @@ window.addEventListener('resize', function() {
 
         const imageelem = document.getElementById("XeeleeSq");
         imageelem.style.height = imageelem.offsetWidth * 0.5625 + 'px';
-        
-        const imageelem2 = document.getElementById("VDBook");
-        imageelem2.style.height = imageelem2.offsetWidth * 1.59362549801 + 'px';
     }
 
 }, false);
