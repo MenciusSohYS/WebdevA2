@@ -273,16 +273,28 @@ window.addEventListener('resize', function() {
         {
             changethisbookf = document.getElementById('bookfront2');
             changethisbookb = document.getElementById('bookback2');
+            document.getElementById("bookback3").style.display = "none";
+            document.getElementById("bookfront3").style.display = "none";
+            document.getElementById("bookback4").style.display = "none";
+            document.getElementById("bookfront4").style.display = "none";
         }
         else if (document.getElementById('bookback3').style.display == "block")
         {
             changethisbookf = document.getElementById('bookfront3');
             changethisbookb = document.getElementById('bookback3');
+            document.getElementById("bookback2").style.display = "none";
+            document.getElementById("bookfront2").style.display = "none";
+            document.getElementById("bookback4").style.display = "none";
+            document.getElementById("bookfront4").style.display = "none";
         }
         else
         {        
             changethisbookf = document.getElementById('bookfront4');
-            changethisbookb = document.getElementById('bookback4');   
+            changethisbookb = document.getElementById('bookback4');
+            document.getElementById("bookback2").style.display = "none";
+            document.getElementById("bookfront2").style.display = "none";
+            document.getElementById("bookback3").style.display = "none";
+            document.getElementById("bookfront3").style.display = "none";
         }
 
         changethisbookb.style.width = eleb.offsetWidth - 20 + 'px';
