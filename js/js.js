@@ -130,13 +130,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     document.getElementById('civ').src = "image/3.0.png";
                     document.getElementById('civ').style.width = "300px";
                     document.getElementById('civ').style.height = "300px";
-                    document.getElementById('DescriptionContainer').textContent = "At 3.0, the civilisation is beyond us right now, having an out put millions of times more than us right now. They're able to 'time travel' and move fater than the speed of light";
+                    document.getElementById('DescriptionContainer').textContent = "At 3.0, the civilisation is beyond us right now, having an out put millions of times more than us right now. They're able to 'time travel' and move faster than the speed of light";
                 }
                 else
                 {
                     document.getElementById('civ').src = "image/4.0.png";
-                    document.getElementById('civ').style.width = "400px";
-                    document.getElementById('civ').style.height = "400px";
+                    document.getElementById('civ').style.width = "300px";
+                    document.getElementById('civ').style.height = "300px";
                     document.getElementById('DescriptionContainer').textContent = "At 4.0, the civilisation is Universal, able to harness and move across the universe, they can possibly reach alternate universes and probably have population count in the Quadtrillion. The Xeelee from the Xeelee Sequence Universe are this tier and can even go into other universe";
                 }
             }, false);
@@ -248,7 +248,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 var rectofelem = elem.getBoundingClientRect();
                 var leftofelem = rectofelem.left;
                 var topofelem = rectofelem.top;
-                elem.style.position = "absolute";
                 elem.style.top = topofelem;
                 elem.style.left = leftofelem;
                 rectofelem = elem.getBoundingClientRect();
