@@ -9,8 +9,8 @@ var changecourseY = 1;
 document.addEventListener('DOMContentLoaded', function() {
     if (document.URL.includes("index.html"))
     {
-        document.getElementById("bookback").style.zIndex = 1;
-        document.getElementById("bookfront").style.zIndex = 1;
+        document.getElementById("bookback").style.zIndex = 0;
+        document.getElementById("bookfront").style.zIndex = 0;
         document.getElementById("bookback2").style.display = "none";
         document.getElementById("bookfront2").style.display = "none";
         document.getElementById("bookback3").style.display = "none";
