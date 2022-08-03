@@ -247,13 +247,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 elem.src = "image/Explosion.png";
                 var rectofelem = elem.getBoundingClientRect();
                 var leftofelem = rectofelem.left;
-                alert(leftofelem);
                 var topofelem = rectofelem.top;
                 elem.style.position = "absolute";
                 elem.style.top = topofelem;
                 elem.style.left = leftofelem;
                 rectofelem = elem.getBoundingClientRect();
-                alert(rectofelem.left);
             }
         }, false);
     }
