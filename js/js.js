@@ -106,35 +106,35 @@ document.addEventListener('DOMContentLoaded', function() {
                 showvalue.innerHTML = kvalue.value/10;
                 if (kvalue.value < 10)
                 {
-                    document.getElementById('civ').src = "image/0.7.png";
+                    document.getElementById('civ').src = "../image/0.7.png";
                     document.getElementById('civ').style.width = "180px";
                     document.getElementById('civ').style.height = "180px";
                     document.getElementById('DescriptionContainer').textContent = "This is the current place or planet has on the scale, we're about 0.7 on the Kardashev scale and have a long way to go before we're at the 1.0 mark, maybe in a few hundred years time we will reach that point.";
                 }
                 else if (kvalue.value < 20)
                 {
-                    document.getElementById('civ').src = "image/1.0.png";
+                    document.getElementById('civ').src = "../image/1.0.png";
                     document.getElementById('civ').style.width = "180px";
                     document.getElementById('civ').style.height = "180px";
                     document.getElementById('DescriptionContainer').textContent = "At 1.0, the civilisation can completely harness the planet's resources and energy, being completely sufficient and out putting a lot of energy. The Trisolaris from Three body problem are 1.0"
                 }
                 else if (kvalue.value < 30)
                 {
-                    document.getElementById('civ').src = "image/2.0.png";
+                    document.getElementById('civ').src = "../image/2.0.png";
                     document.getElementById('civ').style.width = "200px";
                     document.getElementById('civ').style.height = "200px";
                     document.getElementById('DescriptionContainer').textContent = "At 2.0, the civilisation uses all the possible power available from the solar system, including the sun itself, some examples are the Dyson Swarm/Sphere and space stations as big as continents, Humans from 40k are 2.7 on the scale";
                 }
                 else if (kvalue.value < 40)
                 {
-                    document.getElementById('civ').src = "image/3.0.png";
+                    document.getElementById('civ').src = "../image/3.0.png";
                     document.getElementById('civ').style.width = "300px";
                     document.getElementById('civ').style.height = "300px";
                     document.getElementById('DescriptionContainer').textContent = "At 3.0, the civilisation is beyond us right now, having an out put millions of times more than us right now. They're able to 'time travel' and move faster than the speed of light";
                 }
                 else
                 {
-                    document.getElementById('civ').src = "image/4.0.png";
+                    document.getElementById('civ').src = "../image/4.0.png";
                     document.getElementById('civ').style.width = "300px";
                     document.getElementById('civ').style.height = "300px";
                     document.getElementById('DescriptionContainer').textContent = "At 4.0, the civilisation is Universal, able to harness and move across the universe, they can possibly reach alternate universes and probably have population count in the Quadtrillion. The Xeelee from the Xeelee Sequence Universe are this tier and can even go into other universe";
@@ -251,9 +251,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         document.getElementById("XeeleeNightFighter").addEventListener('click', function(){
             const elem = document.getElementById("XeeleeNightFighter");
-            if (elem.getAttribute('src')===("image/NightFighter.png"))
+            if (elem.getAttribute('src')===("../image/NightFighter.png"))
             {
-                elem.src = "image/Explosion.png";
+                elem.src = "../image/Explosion.png";
                 var rectofelem = elem.getBoundingClientRect();
                 var leftofelem = rectofelem.left;
                 var topofelem = rectofelem.top;
@@ -528,7 +528,7 @@ if (document.URL.includes("Universe.html"))
 {
     setInterval(() => {
         const elem = document.getElementById("XeeleeNightFighter");
-        if (elem.getAttribute('src')===("image/NightFighter.png"))
+        if (elem.getAttribute('src')===("../image/NightFighter.png"))
         {
             var rectofelem = elem.getBoundingClientRect();
             var prevleft = rectofelem.left;
