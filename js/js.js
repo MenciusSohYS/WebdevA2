@@ -163,15 +163,12 @@ document.addEventListener('DOMContentLoaded', function() {
         
 
         var classstuff = document.getElementById("BBera").getBoundingClientRect();
-        document.getElementsByClassName("dot")[0].style.left = classstuff.left - 30 + 'px';
-
-        document.getElementsByClassName("dot")[1].style.left = classstuff.left - 30 + 'px';
-        document.getElementsByClassName("dot")[1].style.gridRowStart = 2;
-        document.getElementsByClassName("dot")[1].style.gridRowEnd = 3;
-        
-        document.getElementsByClassName("dot")[2].style.left = classstuff.left - 30 + 'px';
-        document.getElementsByClassName("dot")[2].style.gridRowStart = 3;
-        document.getElementsByClassName("dot")[2].style.gridRowEnd = 4;
+        for (var i = 0; i < 5; i++)
+        {
+            document.getElementsByClassName("dot")[i].style.left = classstuff.left - 30 + 'px';
+            document.getElementsByClassName("dot")[i].style.gridRowStart = i + 1;
+            document.getElementsByClassName("dot")[i].style.gridRowEnd = i + 2;
+        }
     }
     else if (document.URL.includes("GalaxyBook.html"))
     {
@@ -345,15 +342,13 @@ window.addEventListener('resize', function() {
             document.getElementById("fermi").style.height = (width1 * 0.2) + 'px';
         }
         var classstuff = document.getElementById("BBera").getBoundingClientRect();
-        document.getElementsByClassName("dot")[0].style.left = classstuff.left - 30 + 'px';
 
-        document.getElementsByClassName("dot")[1].style.left = classstuff.left - 30 + 'px';
-        document.getElementsByClassName("dot")[1].style.gridRowStart = 2;
-        document.getElementsByClassName("dot")[1].style.gridRowEnd = 3;
-        
-        document.getElementsByClassName("dot")[2].style.left = classstuff.left - 30 + 'px';
-        document.getElementsByClassName("dot")[2].style.gridRowStart = 3;
-        document.getElementsByClassName("dot")[2].style.gridRowEnd = 4;
+        for (var i = 0; i < 5; i++)
+        {
+            document.getElementsByClassName("dot")[i].style.left = classstuff.left - 30 + 'px';
+            document.getElementsByClassName("dot")[i].style.gridRowStart = i + 1;
+            document.getElementsByClassName("dot")[i].style.gridRowEnd = i + 2;
+        }
     }
     else if (document.URL.includes("GalaxyBook.html"))
     {
